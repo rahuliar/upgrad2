@@ -75,13 +75,18 @@
         }
 
         .bannerSection {
-            height: 100vh;
+            height: 85vh;
             background: transparent;
         }
         
         /* ------------------------------------- Block2 ------------------------------------- */
+        .programOverview{
+            background-color: whitesmoke;
+            color: var(--color);
+        }
         .programOverviewOrangeBox {
             font-size: 18px;
+            color: var(--color4);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.664);
         }
 
@@ -107,6 +112,9 @@
 
         @media (max-width:575px) {
             .bannerSection::before {
+                height: 90vh;
+            }
+            .bannerSection {
                 height: 90vh;
             }
            .bannerSection .col-sm-4.d-flex.justify-content-center.align-items-center{
@@ -149,7 +157,7 @@
         </div>
     </div>
     <!---------------------------------------- block2  ---------------------------------------->
-    <div class="programOverview mt-3">
+    <div class="programOverview mt-3 pt-3 pb-sm-3 pb-0">
         <div class="container">
             <h4>Programme Overview</h4>
             <h5>Key Highlights</h5>
