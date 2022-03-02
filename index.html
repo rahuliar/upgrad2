@@ -14,7 +14,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- logo  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-     
+
     <!--
         
 
@@ -34,6 +34,7 @@
 
         body {
             color: var(--color) !important;
+            background-color: whitesmoke;
         }
 
         :root {
@@ -41,8 +42,10 @@
             --color2: #ff5f00;
             --color3: #ffb900;
             --color4: white;
+        }
 
-            --colorr: #f23e36;
+        button.slick-arrow {
+            display: none !important;
         }
 
         .primarybtn {
@@ -59,10 +62,12 @@
             background-color: var(--color3) !important;
             color: var(--color) !important;
         }
-        .programpricing{
-                background-color: var(--color);
-                color: var(--color4);
+
+        .programpricing {
+            background-color: var(--color);
+            color: var(--color4);
         }
+
         /* ------------------------------------- Block1 ------------------------------------- */
         .bannerSection::before {
             position: absolute;
@@ -71,7 +76,7 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: co;
-            height: 85vh;
+            height: 90vh;
             width: 100vw;
             opacity: 0.6;
             z-index: -1;
@@ -79,29 +84,42 @@
 
         .bannerSection {
             color: white;
-            height: 85vh;
+            height: 90vh;
             background: transparent;
             background-color: #0102355e;
         }
-        .programstate{
+
+        .programstate {
             position: absolute;
-            bottom:5px
+            bottom: 3%;
         }
-        .programstate .container{
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.397);
+
+        .programstate .container {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.158);
         }
-        
+
+        .programstate ul {
+            list-style: none;
+            padding: 0px 24px;
+        }
+
+        .programstate ul li {
+            font-size: 100%;
+            padding: 20px 10px;
+        }
+
         /* ------------------------------------- Block2 ------------------------------------- */
         .programOverviewOrangeBox {
             font-size: 18px;
             color: var(--color4);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.664);
+            background-color: var(--color2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.288);
         }
 
         /* ------------------------------------- Block4 ------------------------------------- */
         .programValue h4 {
             color: var(--color2);
-            text-shadow:  0 0.5px 0.5px rgba(0, 0, 0, 0.603);
+            text-shadow: 0 0.5px 0.5px rgba(0, 0, 0, 0.603);
         }
         
         .description {
@@ -111,11 +129,25 @@
         .show {
             color: var(--color2);
             cursor: pointer;
-            text-shadow:  0 0.15px 0.15px rgba(0, 0, 0, 0.603);
+            text-shadow: 0 0.15px 0.15px rgba(0, 0, 0, 0.603);
         }
-
+        
         .show:hover {
             color: var(--color3);
+        }
+        
+        /* ------------------------------------- Block 6 ------------------------------------- */
+
+        .Carousel_wrapper_7_content {
+            box-shadow: 0 4px 10px rgb(0 0 0 / 16%);
+            border-radius: 10px;
+            background-color: var(--color4);
+            color: var(--color);
+            padding: 0px;
+        }
+
+        .Carousel_wrapper_7_content img {
+            border-radius: 10px;
         }
 
         /* ------------------------------------ media ------------------------------------ */
@@ -130,33 +162,45 @@
             .bannerSection::before {
                 height: 90vh;
             }
+
             .bannerSection {
                 height: 90vh;
             }
-           .bannerSection .col-sm-4.d-flex.justify-content-center.align-items-center{
-               justify-content: flex-start !important;
-           }
-           .bannerSection img{
-               clip-path: none !important;
-           }
+
+            .bannerSection .col-sm-4.d-flex.justify-content-center.align-items-center {
+                justify-content: flex-start !important;
+            }
+
+            .bannerSection img {
+                clip-path: none !important;
+            }
+        }
+
+        @media (max-width:590px) {
+            .Carousel_wrapper .primarybtn {
+                padding: 3px !important;
+                font-size: 10px !important;
+            }
         }
     </style>
 </head>
 
 <body>
-    
+
     <!---------------------------------------- block1  ---------------------------------------->
     <div class="bannerSection">
         <div class="container pt-5">
             <div class="row ps-3">
                 <div class="p-0 col-sm-4 d-flex justify-content-center align-items-center">
-                    <img class="me-3" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTuKqFMkddcJB6jQKW71ahlUf5e84wzcDShl-9B40LrYObeZaTv" alt="" style="clip-path: circle(50%);" height="65" width="100">
+                    <img class="me-3"
+                        src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTuKqFMkddcJB6jQKW71ahlUf5e84wzcDShl-9B40LrYObeZaTv"
+                        alt="" style="clip-path: circle(50%);" height="65" width="100">
                     <div class="d-flex flex-column ps-3 border-start border-light">
-                        <h5>Institute Of Management and technology</h5>
+                        <h4>Institute Of Management and technology</h4>
                     </div>
                 </div>
             </div>
-            <h1>MBA (Global) | Deakin Business School</h1>
+            <h1 class="mt-lg-2 mt-3">MBA (Global) | Deakin Business School</h1>
             <p>Be a business leader of tomorrow and advance your career with MBA Degree from Australia's top B-School -
                 Deakin Business School (DBS).</p>
             <p>Start your MBA journey today at Rs. 12,620 per month.</p>
@@ -173,40 +217,40 @@
         </div>
         <div class="programstate d-flex justify-content-center align-items-center w-100">
             <div class="container bg-light text-dark rounded">
-                <div class="row d-flex justify-content-center">
-                    <div class="d-flex col-md-2 col-4 flex-column">
+                <ul class="d-flex align-items-center justify-content-center">
+                    <li>
                         <h4>Dual Credentials</h4>
                         <span>MBA from DBS & PGPM from IMT</span>
-                    </div>
-                    <div class="d-flex col-md-2 col-4 flex-column">
-                        <h4>Dual Credentials</h4>
-                        <span>MBA from DBS & PGPM from IMT</span>
-                    </div>
-                    <div class="d-flex col-md-2 col-4 flex-column">
-                        <h4>Dual Credentials</h4>
-                        <span>MBA from DBS & PGPM from IMT</span>
-                    </div>
-                    <div class="d-flex col-md-2 col-4 flex-column">
-                        <h4>Dual Credentials</h4>
-                        <span>MBA from DBS & PGPM from IMT</span>
-                    </div>
-                    <div class="d-flex col-md-2 col-4 flex-column">
-                        <h4>Dual Credentials</h4>
-                        <span>MBA from DBS & PGPM from IMT</span>
-                    </div>
-                    <div class="d-flex col-2 flex-column">
-                        <h4>Dual Credentials</h4>
-                        <span>MBA from DBS & PGPM from IMT</span>
-                    </div>
-                </div>
+                    </li>
+                    <li>
+                        <h4>AACSB & EQUIS</h4>
+                        <span>Deakin B-School Accreditation</span>
+                    </li>
+                    <li>
+                        <h4>24 Months</h4>
+                        <span>1st Yr 8-10Hrs/Week | 2nd Yr 15-18Hrs/Week</span>
+                    </li>
+                    <li>
+                        <h4>Mar 31, 2022</h4>
+                        <span>Programme Start Date</span>
+                    </li>
+                    <li>
+                        <h4>EMI options</h4>
+                        <span>Starting at Rs. 12,620</span>
+                    </li>
+                    <li>
+                        <h4>5 out of 6 Learners</h4>
+                        <span>Get Positive Career Growth</span>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
     <!---------------------------------------- block2  ---------------------------------------->
     <div class="programOverview mt-lg-5 pt-lg-5 pt-3 pb-sm-3 pb-0">
         <div class="container">
-            <h4>Programme Overview</h4>
-            <h5>Key Highlights</h5>
+            <h1>Programme Overview</h1>
+            <h4>Key Highlights</h4>
             <div class="row d-flex justify-content-evenly pt-2">
                 <div class="col-lg-4">
                     <ul>
@@ -227,8 +271,7 @@
                         <li>Get a MBA (Global) Degree from Deakin Business School</li>
                     </ul>
                 </div>
-                <div class="col-lg-4 fw-bolder rounded programOverviewOrangeBox"
-                    style="background-color: var(--color2);">
+                <div class="col-lg-4 fw-bolder rounded programOverviewOrangeBox">
                     <div class="col-12 d-flex justify-content-center">
                         <p class="col-10 p-2 m-0">The Deakin MBA is designed to build your business acumen, enhance your
                             decision-making and communication skills, and ultimately to further your career as a manager
@@ -242,12 +285,12 @@
     <!---------------------------------------- block 3 ---------------------------------------->
     <div class="programpricing p-lg-3 p-2 m-0 pt-4 pb-4">
         <div class="container">
-            <div class="col-12 d-flex justify-content-center flex-column">
-                <h3 class="text-center ">Programme Fee - Indian Residents</h3>
+            <div class="col-12 d-flex justify-content-center flex-column pt-md-5 pb-md-5">
                 <div class="row d-flex justify-content-evenly align-items-center pt-2">
-                    <div class="col-lg-6 col-sm-6 col-12 d-flex justify-content-center">
-                        <alt>Best-in-class content by leading faculty and industry leaders in the form of videos, cases
-                            and projects</alt>
+                    <div class="col-lg-6 col-sm-6 col-12 d-flex justify-content-center flex-column">
+                        <h3>Syllabus</h3>
+                        <span>Best-in-class content by leading faculty and industry leaders in the form of videos, cases
+                            and projects</span>
                     </div>
                     <div class="col-lg-4 col-sm-6 col-12 d-flex justify-content-center"> <button
                             class="primarybtn w-75"><i class="fa fa-download"></i> Download Syllabus</button></div>
@@ -300,16 +343,75 @@
     <!---------------------------------------- block5 ---------------------------------------->
     <div class="programpricing p-lg-3 p-2 m-0 pt-4 pb-4">
         <div class="container">
-            <div class="col-12 d-flex justify-content-center flex-column">
+            <div class="col-12 d-flex justify-content-center flex-column pt-md-5 pb-md-5">
                 <h3 class="text-center ">Programme Fee - Indian Residents</h3>
                 <div class="row d-flex justify-content-evenly align-items-center pt-2">
                     <div class="col-lg-4 col-sm-6 col-12 d-flex justify-content-center">
                         <h4>INR 5,29,800 (incl. taxes)</h4>
                     </div>
-                    <div class="col-lg-4 col-sm-6 col-12 d-flex justify-content-center"> <button
-                            class="primarybtn w-75">View Pricing</button></div>
+                    <div class="col-lg-4 col-sm-6 col-12 d-flex justify-content-center">
+                        <button class="primarybtn w-75">View Pricing</button>
+                    </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+
+    <div class="d-flex justify-content-center align-items-center flex-column pb-2">
+        <h2 class="mt-5">upGrad Webinars</h2>
+        <div class="slider center marginRight" style="overflow: hidden; width: 80vw;">
+            <div class="col-sm-3 m-2 Carousel_wrapper_7_content">
+                <img src="https://www.upgrad.com/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2Fds_card__1643637881250.png&w=1920&q=75"
+                    alt="" style="height: 100%; width: 100%;">
+                <div class="mt-1 p-2">
+                    <h4 class="w-100">Data Science</h4>
+                    <span>Discover the newest trends from data science experts, big data practitioners, and industry
+                        leaders.</span>
+                    <div class="mt-2"><button class="primarybtn w-50 bg-light text-info border border-info">Enroll
+                            now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 m-2 Carousel_wrapper_7_content">
+                <img src="https://www.upgrad.com/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2Fds_card__1643637881250.png&w=1920&q=75"
+                    alt="" style="height: 100%; width: 100%;">
+                <div class="mt-1 p-2">
+                    <h4 class="w-100">Data Science</h4>
+                    <span>Discover the newest trends from data science experts, big data practitioners, and industry
+                        leaders.</span>
+                    <div class="mt-2"><button class="primarybtn w-50 bg-light text-info border border-info">Enroll
+                            now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 m-2 Carousel_wrapper_7_content">
+                <img src="https://www.upgrad.com/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2Fds_card__1643637881250.png&w=1920&q=75"
+                    alt="" style="height: 100%; width: 100%;">
+                <div class="mt-1 p-2">
+                    <h4 class="w-100">Data Science</h4>
+                    <span>Discover the newest trends from data science experts, big data practitioners, and industry
+                        leaders.</span>
+                    <div class="mt-2"><button class="primarybtn w-50 bg-light text-info border border-info">Enroll
+                            now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 m-2 Carousel_wrapper_7_content">
+                <img src="https://www.upgrad.com/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Fupgrad1%2Fmarketing-platform-assets%2Fsprites%252Fimages%2Fds_card__1643637881250.png&w=1920&q=75"
+                    alt="" style="height: 100%; width: 100%;">
+                <div class="mt-1 p-2">
+                    <h4 class="w-100">Data Science</h4>
+                    <span>Discover the newest trends from data science experts, big data practitioners, and industry
+                        leaders.</span>
+                    <div class="mt-2"><button class="primarybtn w-50 bg-light text-info border border-info">Enroll
+                            now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 d-flex w-75 justify-content-center">
+            <button class="primarybtn w-75">View All Upgrad program</button>
         </div>
     </div>
     <!---------------------------------------- script ---------------------------------------->
@@ -325,6 +427,40 @@
                 showHide.style.display = 'none';
             })
         })
+        $('.center').slick({
+            centerMode: true,
+            centerPadding: '60px',
+            slidesToShow: 3,
+            responsive: [
+                {
+                    breakpoint: 968,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 740,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1.5
+                    }
+                },
+                {
+                    breakpoint: 540,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
 
     </script>
 </body>
