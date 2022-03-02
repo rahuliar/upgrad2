@@ -26,14 +26,14 @@
     -->
 
     <style>
+        /* ------------------------------------- Common ------------------------------------- */
         * {
             padding: 0px;
             margin: 0px;
         }
 
         body {
-            color: var(--color4) !important;
-            background-color: var(--color) !important;
+            color: var(--color) !important;
         }
 
         :root {
@@ -59,7 +59,10 @@
             background-color: var(--color3) !important;
             color: var(--color) !important;
         }
-
+        .programpricing{
+                background-color: var(--color);
+                color: var(--color4);
+        }
         /* ------------------------------------- Block1 ------------------------------------- */
         .bannerSection::before {
             position: absolute;
@@ -75,15 +78,20 @@
         }
 
         .bannerSection {
+            color: white;
             height: 85vh;
             background: transparent;
+            background-color: #0102355e;
+        }
+        .programstate{
+            position: absolute;
+            bottom:5px
+        }
+        .programstate .container{
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.397);
         }
         
         /* ------------------------------------- Block2 ------------------------------------- */
-        .programOverview{
-            background-color: whitesmoke;
-            color: var(--color);
-        }
         .programOverviewOrangeBox {
             font-size: 18px;
             color: var(--color4);
@@ -92,23 +100,31 @@
 
         /* ------------------------------------- Block4 ------------------------------------- */
         .programValue h4 {
-            color: var(--color3);
+            color: var(--color2);
+            text-shadow:  0 0.5px 0.5px rgba(0, 0, 0, 0.603);
         }
-
+        
         .description {
             display: none;
         }
-
+        
         .show {
             color: var(--color2);
             cursor: pointer;
+            text-shadow:  0 0.15px 0.15px rgba(0, 0, 0, 0.603);
         }
 
         .show:hover {
             color: var(--color3);
         }
 
-        /* media  */
+        /* ------------------------------------ media ------------------------------------ */
+
+        @media (max-width:1000px) {
+            .programstate .container {
+                display: none;
+            }
+        }
 
         @media (max-width:575px) {
             .bannerSection::before {
@@ -155,9 +171,39 @@
                 </div>
             </div>
         </div>
+        <div class="programstate d-flex justify-content-center align-items-center w-100">
+            <div class="container bg-light text-dark rounded">
+                <div class="row d-flex justify-content-center">
+                    <div class="d-flex col-md-2 col-4 flex-column">
+                        <h4>Dual Credentials</h4>
+                        <span>MBA from DBS & PGPM from IMT</span>
+                    </div>
+                    <div class="d-flex col-md-2 col-4 flex-column">
+                        <h4>Dual Credentials</h4>
+                        <span>MBA from DBS & PGPM from IMT</span>
+                    </div>
+                    <div class="d-flex col-md-2 col-4 flex-column">
+                        <h4>Dual Credentials</h4>
+                        <span>MBA from DBS & PGPM from IMT</span>
+                    </div>
+                    <div class="d-flex col-md-2 col-4 flex-column">
+                        <h4>Dual Credentials</h4>
+                        <span>MBA from DBS & PGPM from IMT</span>
+                    </div>
+                    <div class="d-flex col-md-2 col-4 flex-column">
+                        <h4>Dual Credentials</h4>
+                        <span>MBA from DBS & PGPM from IMT</span>
+                    </div>
+                    <div class="d-flex col-2 flex-column">
+                        <h4>Dual Credentials</h4>
+                        <span>MBA from DBS & PGPM from IMT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!---------------------------------------- block2  ---------------------------------------->
-    <div class="programOverview mt-3 pt-3 pb-sm-3 pb-0">
+    <div class="programOverview mt-lg-5 pt-lg-5 pt-3 pb-sm-3 pb-0">
         <div class="container">
             <h4>Programme Overview</h4>
             <h5>Key Highlights</h5>
@@ -194,7 +240,7 @@
         </div>
     </div>
     <!---------------------------------------- block 3 ---------------------------------------->
-    <div class="programpricing p-lg-3 p-2 m-0 pt-4">
+    <div class="programpricing p-lg-3 p-2 m-0 pt-4 pb-4">
         <div class="container">
             <div class="col-12 d-flex justify-content-center flex-column">
                 <h3 class="text-center ">Programme Fee - Indian Residents</h3>
@@ -216,7 +262,7 @@
                 <div class="col-sm-6 p-2">
                     <h4>Top Subjects You Will Learn</h4>
                     <p>Business Growth Strategies, Leadership, Strategic Thinking <span class="show" data-key="1">Show
-                            More....</span> <span class="description" data-description="1">
+                            More....</span> <span class="description">
                             & Planning Abilities, Integrated Business Strategy Formulation, Design Thinking, Change
                             Management, Financing Strategies, International Business, Developing High Performing
                             Organisations
@@ -225,7 +271,7 @@
                 <div class="col-sm-6 p-2">
                     <h4>Job Opportunities</h4>
                     <p>With Deakin's Global MBA you can progress your career <span class="show" data-key="2">Show
-                            More....</span> <span class="description" data-description="2">
+                            More....</span> <span class="description">
                             and pursue leadership opportunities in Management Consulting, Strategy, Operations, Business
                             Development/Sales, Marketing, Finance, and HR Management.
                         </span></p>
@@ -235,7 +281,7 @@
                 <div class="col-sm-6 p-2">
                     <h4>Target Audience</h4>
                     <p>Experienced Managers, Senior Management Executives <span class="show" data-key="3">Show
-                            More....</span> <span class="description" data-description="3">
+                            More....</span> <span class="description">
                             and Business Owners/Entrepreneurs who are in mid to senior career stages with at least 3
                             years of full time relevant work experience in business roles.
                         </span></p>
@@ -252,7 +298,7 @@
     </div>
 
     <!---------------------------------------- block5 ---------------------------------------->
-    <div class="programpricing p-lg-3 p-2 m-0 pt-4">
+    <div class="programpricing p-lg-3 p-2 m-0 pt-4 pb-4">
         <div class="container">
             <div class="col-12 d-flex justify-content-center flex-column">
                 <h3 class="text-center ">Programme Fee - Indian Residents</h3>
